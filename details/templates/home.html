@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Router Properties</h1>
+<table border="2">
+    <th>SAPID</th>
+    <th>HOSTNAME</th>
+    <th>LOOPBACK</th>
+    <th>MAC Address</th>
+
+    {% for data in datas %}
+        <tr>
+            <td>{{ data.SAPId}}</td>
+            <td>{{ data.HOSTNAME}}</td>
+            <td>{{ data.LoopBack}}</td>
+            <td>{{ data.MacAddress}}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
